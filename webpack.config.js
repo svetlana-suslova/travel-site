@@ -2,6 +2,7 @@ const path = require('path')
 
 const postCSSPlugins = [
   require('postcss-import'),
+  require('postcss-mixins'),
   require('postcss-simple-vars'),
   require('postcss-nested'),
   require('autoprefixer')
@@ -30,7 +31,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader?url=false',
-          {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}
+          {loader: 'postcss-loader', options: {plugins: postCSSPlugins}}
         ]
       }
     ]
